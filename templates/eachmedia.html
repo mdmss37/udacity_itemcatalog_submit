@@ -1,0 +1,50 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+    <div class = 'flash'>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="row text-right text-muted">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4">
+            <img class="img-responsive center-block" src="{{image_url}}">
+            <h3>{{title}}</h3>
+            <p>My Score: {{score|string}}</p>
+        </div>
+
+        <div class="col-md-7">
+            <p class="title-super">{{short_description}}</p>
+            {{youtube_url|safe}}
+
+            <button type="button" class="btn btn-default pull-right each-media-btn"><a href="{{url_for('deleteMedia', media_id = media.id)}}">Delete Media</a> </button>
+            <a href="{{url_for('editMedia', media_id = media.id)}}"><button type="button" class="btn btn-default pull-right each-media-btn">Edit Media</button></a>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row footer">
+            <a href="#linkedin">
+                <i class="fa fa-linkedin fa-2x col-xs-1 pull-right"></i>
+            </a>
+            <a href="#git-hub">
+                <i class="fa fa-github fa-2x col-xs-1 pull-right"></i>
+            </a>
+            <a href="#twitter">
+                <i class="fa fa-twitter fa-2x col-xs-1 pull-right"></i>
+            </a>
+            <a href="#facebook">
+                <i class="fa fa-facebook-square fa-2x col-xs-1 pull-right"></i>
+            </a>
+        </div>
+    </div>
+{% endblock %}

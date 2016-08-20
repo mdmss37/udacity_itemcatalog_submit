@@ -1,0 +1,98 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+    <div class = 'flash'>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="row text-right text-muted">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+    </div>
+
+    {% for media in media_three %}
+        {% if media|length == 3 %}
+            <div class="row text-center">
+                <a href = "{{url_for('seeMedia', media_id = media[0].id)}}">
+
+                    <div class="col-md-4 col-sm-4">
+                        <img class="img-responsive center-block" src="{{media[0].image_url}}">
+                        <h3>{{media[0].title}}</h3>
+                        <p><a href="http://github.com">My Score: {{media[0].personal_score|string}}</a></p>
+                    </div>
+                </a>
+
+                <a href = "{{url_for('seeMedia', media_id = media[1].id)}}">
+
+                    <div class="col-md-4 col-sm-4">
+                        <img class="img-responsive center-block" src="{{media[1].image_url}}">
+                        <h3>{{media[1].title}}</h3>
+                        <p><a href="http://github.com">My Score: {{media[1].personal_score|string}}</a></p>
+                    </div>
+                </a>
+
+                <a href = "{{url_for('seeMedia', media_id = media[2].id)}}">
+
+                    <div class="col-md-4 col-sm-4">
+                        <img class="img-responsive center-block" src="{{media[2].image_url}}">
+                        <h3>{{media[2].title}}</h3>
+                        <p><a href="http://github.com">My Score: {{media[2].personal_score|string}}</a></p>
+                    </div>
+                </a>
+
+            </div>
+        {% elif media|length == 2 %}
+            <div class="row text-center">
+               <a href = "{{url_for('seeMedia', media_id = media[0].id)}}">
+
+                    <div class="col-md-4 col-sm-4">
+                        <img class="img-responsive center-block" src="{{media[0].image_url}}">
+                        <h3>{{media[0].title}}</h3>
+                        <p><a href="http://github.com">My Score: {{media[0].personal_score|string}}</a></p>
+                    </div>
+                </a>
+
+                <a href = "{{url_for('seeMedia', media_id = media[1].id)}}">
+
+                    <div class="col-md-4 col-sm-4">
+                        <img class="img-responsive center-block" src="{{media[1].image_url}}">
+                        <h3>{{media[1].title}}</h3>
+                        <p><a href="http://github.com">My Score: {{media[1].personal_score|string}}</a></p>
+                    </div>
+                </a>
+            </div>
+        {% elif media|length == 1 %}
+            <div class="row text-center">
+                <a href = "{{url_for('seeMedia', media_id = media[0].id)}}">
+
+                    <div class="col-md-4 col-sm-4">
+                        <img class="img-responsive center-block" src="{{media[0].image_url}}">
+                        <h3>{{media[0].title}}</h3>
+                        <h4><a href="http://github.com">My Score: {{media[0].personal_score|string}}</a></h4>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <div class="container">
+        <div class="row footer">
+            <a href="#linkedin">
+                <i class="fa fa-linkedin fa-2x col-xs-1 pull-right"></i>
+            </a>
+            <a href="#git-hub">
+                <i class="fa fa-github fa-2x col-xs-1 pull-right"></i>
+            </a>
+            <a href="#twitter">
+                <i class="fa fa-twitter fa-2x col-xs-1 pull-right"></i>
+            </a>
+            <a href="#facebook">
+                <i class="fa fa-facebook-square fa-2x col-xs-1 pull-right"></i>
+            </a>
+        </div>
+    </div>
+{% endblock %}

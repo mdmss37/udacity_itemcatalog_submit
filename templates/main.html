@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=devicei-width, initial-scale=1">
+
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+		<!-- CSS downloaded with default setting from bootstrap site with all feature -->
+		<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+		 <!-- js downloaded with default setting from bootstrap site with all feature -->
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.12.4.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 	</head>
 	<body>
 		<div class="container">

@@ -1,0 +1,105 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    padding-top: 20px;
+}
+
+.each-media-btn {
+    /*padding-top: 30px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+    margin-top: -7px;
+}
+
+.form-title {
+    margin-bottom: -5px;
+}
+
+.padding-bottom {
+    padding-bottom: 30px;
+}
+
+.google-login-button {
+    margin-top: 50px;
+}
+
+.fb-login-button {
+    margin: 50px 0 50px 0;
+}
+
+.delete-button {
+    margin: 50px 0 50px 0;
+}
+
+.login-box {
+    border-radius: 10px;
+    border: 1px solid #BCBBBB;
+    max-width: 700px;
+    margin-top: 60px;
+}
+
+.login-header {
+    padding: 20px 0px 20px 10px;
+}
+
+.flash {
+    padding-top: 40px;
+}
+
+.text-muted {
+    color: #BCBBBB;
+    margin-bottom: 5px
+}
+
+.text-thin {
+    font-weight: 100;
+}
+
+.title-super {
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.title-sub {
+    margin-top: 0;
+}
+
+.lead {
+    border-bottom: 1px solid #BCBBBB;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.featured-work {
+    margin-bottom: 5px;
+}
+
+.project-description {
+    margin-top: 10px;
+    color: #BCBBBB;
+}
+
+.modal-title {
+    color: #BCBBBB;
+}
+
+.footer {
+    border-top: 1px solid #BCBBBB;
+    margin: 0 0 40px 0;
+    padding-top: 30px;
+}
+
+.pull-right {
+  float: right !important;
+}
+@media (max-width: 768px) {
+    .title-super {
+        font-size: 50px;
+    }
+}

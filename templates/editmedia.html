@@ -1,0 +1,45 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row lead">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Update Media Information</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="#" method = "post">
+				<div class="form-group">
+				<label for="title" class="form-title">Title:</label>
+				<p class="text-thin">{{media.title}}</p>
+				<input type ="text" class="form-control" maxlength="500" name="title" value="{{media.title}}">
+
+				<label for="title" class="form-title">Image URL:</label>
+				<p class="text-thin">{{media.image_url}}</p>
+				<input type ="text" class="form-control" maxlength="500" name="image_url" value="{{media.image_url}}">
+
+				<label for="title" class="form-title">Embed Youtube URL:</label>
+				<p class="text-thin">{{media.embed_youtube_url}}</p>
+				<input type ="text" class="form-control" maxlength="500" name="embed_youtube_url" value="{{media.embed_youtube_url}}">
+
+				<label for="title" class="form-title">Personal Score:</label>
+				<p class="text-thin">{{media.personal_score}}</p>
+				<input type ="text" class="form-control" maxlength="100" name="personal_score" value="{{media.personal_score}}">
+
+				<label for="title" class="form-title">Short Description:</label>
+				<p class="text-thin">{{media.short_description}}</p>
+				<input type ="text" class="form-control" maxlength="500" name="short_description" value="{{media.short_description}}">
+
+				<div class="padding-bottom"></div>
+				<button type="submit" class="btn btn-default" id="submit" type="submit">
+					<span class="glyphicon glyphicon-upload" aria-hidden="true">Update</span>
+				</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+{% endblock %}
