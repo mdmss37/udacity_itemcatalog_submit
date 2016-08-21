@@ -298,26 +298,18 @@ def clearSession():
     login_session.clear()
     return "Session cleared"
 
-# JSON APIs to view Restaurant Information
+# JSON APIs to view Media Information
 
-@app.route('/restaurant/<int:restaurant_id>/menu/JSON')
-def restaurantMenuJSON(restaurant_id):
-    restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
-    items = session.query(MenuItem).filter_by(
-        restaurant_id=restaurant_id).all()
-    return jsonify(MenuItems=[i.serialize for i in items])
+@app.route('/media/<int:media_id>/media/JSON')
+def eachMediaJSON(media_id):
+    media = session.query(Media).filter_by(id=media_id).one()
+    return jsonify(media.serialize)
 
 
-@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/JSON')
-def menuItemJSON(restaurant_id, menu_id):
-    Menu_Item = session.query(MenuItem).filter_by(id=menu_id).one()
-    return jsonify(Menu_Item=Menu_Item.serialize)
-
-
-@app.route('/restaurant/JSON')
-def restaurantsJSON():
-    restaurants = session.query(Restaurant).all()
-    return jsonify(restaurants=[r.serialize for r in restaurants])
+@app.route('/media/JSON')
+def allMediaJSON():
+    medias = session.query(Media).all()
+    return jsonify(Medias=[m.serialize for m in medias])
 
 
 # Show all media

@@ -29,12 +29,12 @@ class Media(Base):
     def serialize(self):
        """Return object data in easily serializeable format"""
        return {
-           'title'         : self.title,
-           'id'           : self.id,
-           'image_url'    : self.image_url,
-           'embed_youtube_url'    : self.embed_youtube_url,
-           'personal_score'       : self.personal_score,
-           'short_review'         : self.short_review
+           'title'                     : self.title,
+           'id'                        : self.id,
+           'image_url'                 : self.image_url,
+           'embed_youtube_url'         : self.embed_youtube_url,
+           'personal_score'            : self.personal_score,
+           'short_description'         : self.short_description
        }
 
 # class MenuItem(Base):
