@@ -420,7 +420,7 @@ def editMedia(media_id):
         return render_template('editmedia.html', media=editedMedia)
 
 
-# Delete a restaurant
+# Delete a media
 @app.route('/media/<int:media_id>/delete/', methods=['GET', 'POST'])
 def deleteMedia(media_id):
     mediaToDelete = session.query(Media).filter_by(id=media_id).one()
